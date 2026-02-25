@@ -16,6 +16,6 @@ PromptBio is a platform for biological data analysis powered by AI. This wiki co
 
 ## Quick Links
 
-- [Getting Started](./general/Home/getting-started)
-- [Project Setup](./general/Project/project-overview)
-- [Analysis Overview](./general/Analysis/comparative-analysis)
+- [Getting Started](./general/Home/getting-started.md)
+- [Project Setup](./general/Project/overview.md)
+- [Analysis Overview](./general/Analysis/Comparative_analysis.md)

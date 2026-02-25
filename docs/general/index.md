@@ -10,11 +10,11 @@ This section contains high-level guides for all PromptBio modules. Choose a modu
 
 | Module | Description |
 |---|---|
-| [Analysis](./Analysis/comparative-analysis) | Run comparative, differential, and enrichment analyses |
-| [Data](./Data/data-overview) | Data ingestion, formatting, and management |
-| [MLGenie](./MLGenie/mlgenie-overview) | Machine learning pipelines |
-| [MarkerGenie](./MarkerGenie/markergenie-overview) | Biomarker discovery and annotation |
-| [NotebookGenie](./NotebookGenie/notebookgenie-overview) | AI-assisted notebook generation |
-| [Omics](./Omics/omics-overview) | Multi-omics integration |
-| [Project](./Project/project-overview) | Project structure and management |
-| [Workflow](./Workflow/workflow-overview) | Building and running analysis workflows |
+| [Analysis](./Analysis/Comparative_analysis.md) | Run comparative, differential, and enrichment analyses |
+| [Data](./Data/overview.md) | Data ingestion, formatting, and management |
+| [MLGenie](./MLGenie/overview.md) | Machine learning pipelines |
+| [MarkerGenie](./MarkerGenie/overview.md) | Biomarker discovery and annotation |
+| [NotebookGenie](./NotebookGenie/overview.md) | AI-assisted notebook generation |
+| [Omics](./Omics/overview.md) | Multi-omics integration |
+| [Project](./Project/overview.md) | Project structure and management |
+| [Workflow](./Workflow/overview.md) | Building and running analysis workflows |

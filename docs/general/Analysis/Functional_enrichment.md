@@ -17,7 +17,7 @@ Functional enrichment analysis helps you understand the biological meaning behin
 
 ## How to Run
 
-1. Complete a [Differential Analysis](./differential-analysis) first
+1. Complete a [Differential Analysis](./Differential_analysis.md) first
 2. Go to **Analysis → Functional Enrichment**
 3. Select the differential analysis result as your input
 4. Choose your database(s)

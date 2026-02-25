@@ -10,7 +10,7 @@ This section covers the technical internals of PromptBio — API references, arc
 
 ## Contents
 
-- [API Reference](./api-reference) — REST API endpoints and authentication
+- [API Reference](./api-reference.md) — REST API endpoints and authentication
 - SDK Guide — Using the `promptbio-sdk` Python package *(coming soon)*
 - Architecture — System architecture overview *(coming soon)*
 - Self-Hosting — Deploying PromptBio on your own infrastructure *(coming soon)*

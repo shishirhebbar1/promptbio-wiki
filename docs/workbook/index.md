@@ -11,7 +11,7 @@ The Workbook section contains end-to-end tutorials using real example datasets. 
 ## Available Tutorials
 
 ### Beginner
-- [Tutorial 1: Your First Differential Analysis](./tutorial-differential-analysis) — Analyze a bulk RNA-seq dataset comparing two conditions
+- [Tutorial 1: Your First Differential Analysis](./tutorial-differential-analysis.md) — Analyze a bulk RNA-seq dataset comparing two conditions
 - Tutorial 2: Functional Enrichment from Scratch — Take DE results and run GO and KEGG enrichment *(coming soon)*
 
 ### Intermediate

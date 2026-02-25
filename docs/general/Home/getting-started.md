@@ -23,7 +23,7 @@ A **Project** is the top-level container for your data, analyses, and results.
 
 ## 3. Upload Your Data
 
-Go to **Data → Upload** and upload your expression matrix and metadata file. See [Data Management](../Data/data-overview) for formatting requirements.
+Go to **Data → Upload** and upload your expression matrix and metadata file. See [Data Management](../Data/overview.md) for formatting requirements.
 
 ## 4. Run Your First Analysis
 
