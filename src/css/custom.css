@@ -1,0 +1,44 @@
+:root {
+  --ifm-color-primary: #5b47e0;
+  --ifm-color-primary-dark: #4a36d4;
+  --ifm-color-primary-darker: #4532c9;
+  --ifm-color-primary-darkest: #3828a5;
+  --ifm-color-primary-light: #6e5de5;
+  --ifm-color-primary-lighter: #7568e8;
+  --ifm-color-primary-lightest: #9189ef;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-weight: 700;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #8f7ff5;
+  --ifm-color-primary-dark: #7a68f2;
+  --ifm-color-primary-darker: #6f5cf0;
+  --ifm-color-primary-darkest: #5040ea;
+  --ifm-color-primary-light: #a496f8;
+  --ifm-color-primary-lighter: #afa3f9;
+  --ifm-color-primary-lightest: #cbc5fc;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar refinements */
+.navbar {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar refinements */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Content typography */
+.markdown h1:first-child {
+  font-size: 2rem;
+}
+
+/* Code blocks */
+.prism-code {
+  font-size: 0.875rem;
+}
