@@ -1,0 +1,134 @@
+{
+  "/promptbio-wiki/__docusaurus/debug-a62": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/promptbio-wiki/__docusaurus/debug/config-839": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/promptbio-wiki/__docusaurus/debug/content-da1": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    },
+    "__props": "__props---promptbio-wiki-docusaurus-debug-content-0-bc-8f3"
+  },
+  "/promptbio-wiki/__docusaurus/debug/globalData-59b": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/promptbio-wiki/__docusaurus/debug/metadata-af6": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/promptbio-wiki/__docusaurus/debug/registry-3e7": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/promptbio-wiki/__docusaurus/debug/routes-bab": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/promptbio-wiki/docs-5cc": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---docsaba-d7c"
+    }
+  },
+  "/promptbio-wiki/docs-46b": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---promptbio-wiki-docs-0-f-3-737"
+  },
+  "/promptbio-wiki/docs-f92": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/promptbio-wiki/docs/general-53c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-bd-6-982"
+  },
+  "/promptbio-wiki/docs/general/Analysis/comparative-analysis-8cf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-analysis-comparative-analysis-1-cc-f0d"
+  },
+  "/promptbio-wiki/docs/general/Analysis/differential-analysis-e7d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-analysis-differential-analysis-281-3b2"
+  },
+  "/promptbio-wiki/docs/general/Analysis/functional-enrichment-98c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-analysis-functional-enrichmentc-4-d-9d6"
+  },
+  "/promptbio-wiki/docs/general/Analysis/multi-group-comparison-480": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-analysis-multi-group-comparison-5-bf-416"
+  },
+  "/promptbio-wiki/docs/general/Analysis/single-cell-clustering-07b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-analysis-single-cell-clustering-618-307"
+  },
+  "/promptbio-wiki/docs/general/Data/data-overview-2fd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-data-data-overview-288-de0"
+  },
+  "/promptbio-wiki/docs/general/Home/getting-started-2c1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-home-getting-startedd-6-e-260"
+  },
+  "/promptbio-wiki/docs/general/MarkerGenie/markergenie-overview-f08": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-marker-genie-markergenie-overview-2-de-0b0"
+  },
+  "/promptbio-wiki/docs/general/MLGenie/mlgenie-overview-931": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-ml-genie-mlgenie-overview-08-e-cde"
+  },
+  "/promptbio-wiki/docs/general/NotebookGenie/notebookgenie-overview-d02": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-notebook-genie-notebookgenie-overviewa-81-2d8"
+  },
+  "/promptbio-wiki/docs/general/Omics/omics-overview-a44": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-omics-omics-overview-8-be-c06"
+  },
+  "/promptbio-wiki/docs/general/Project/project-overview-4ec": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-project-project-overviewfe-8-28e"
+  },
+  "/promptbio-wiki/docs/general/Workflow/workflow-overview-d42": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-general-workflow-workflow-overviewdf-7-43a"
+  },
+  "/promptbio-wiki/docs/intro-388": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-intro-0-e-3-be1"
+  },
+  "/promptbio-wiki/docs/technical-ea4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-technical-a-39-8bb"
+  },
+  "/promptbio-wiki/docs/technical/api-reference-fe8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-technical-api-referenced-21-701"
+  },
+  "/promptbio-wiki/docs/workbook-9da": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workbook-43-a-f50"
+  },
+  "/promptbio-wiki/docs/workbook/tutorial-differential-analysis-119": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workbook-tutorial-differential-analysisb-55-b7b"
+  }
+}

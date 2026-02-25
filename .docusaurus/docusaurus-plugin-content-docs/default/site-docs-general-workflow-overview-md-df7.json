@@ -1,0 +1,24 @@
+{
+  "id": "general/Workflow/workflow-overview",
+  "title": "Workflow Overview",
+  "description": "Workflows let you chain multiple PromptBio analyses together into a single automated pipeline. Instead of running each step manually, you define the steps once and run them end-to-end.",
+  "source": "@site/docs/general/Workflow/overview.md",
+  "sourceDirName": "general/Workflow",
+  "slug": "/general/Workflow/workflow-overview",
+  "permalink": "/promptbio-wiki/docs/general/Workflow/workflow-overview",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "workflow-overview",
+    "title": "Workflow Overview",
+    "sidebar_position": 1
+  },
+  "sidebar": "generalSidebar",
+  "previous": {
+    "title": "Omics Overview",
+    "permalink": "/promptbio-wiki/docs/general/Omics/omics-overview"
+  }
+}

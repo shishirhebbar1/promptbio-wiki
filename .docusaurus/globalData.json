@@ -1,0 +1,134 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/promptbio-wiki/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/promptbio-wiki/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "general/Analysis/comparative-analysis",
+              "path": "/promptbio-wiki/docs/general/Analysis/comparative-analysis",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "general/Analysis/differential-analysis",
+              "path": "/promptbio-wiki/docs/general/Analysis/differential-analysis",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "general/Analysis/functional-enrichment",
+              "path": "/promptbio-wiki/docs/general/Analysis/functional-enrichment",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "general/Analysis/multi-group-comparison",
+              "path": "/promptbio-wiki/docs/general/Analysis/multi-group-comparison",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "general/Analysis/single-cell-clustering",
+              "path": "/promptbio-wiki/docs/general/Analysis/single-cell-clustering",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "general/Data/data-overview",
+              "path": "/promptbio-wiki/docs/general/Data/data-overview",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "general/general-overview",
+              "path": "/promptbio-wiki/docs/general/"
+            },
+            {
+              "id": "general/Home/getting-started",
+              "path": "/promptbio-wiki/docs/general/Home/getting-started",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "general/MarkerGenie/markergenie-overview",
+              "path": "/promptbio-wiki/docs/general/MarkerGenie/markergenie-overview",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "general/MLGenie/mlgenie-overview",
+              "path": "/promptbio-wiki/docs/general/MLGenie/mlgenie-overview",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "general/NotebookGenie/notebookgenie-overview",
+              "path": "/promptbio-wiki/docs/general/NotebookGenie/notebookgenie-overview",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "general/Omics/omics-overview",
+              "path": "/promptbio-wiki/docs/general/Omics/omics-overview",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "general/Project/project-overview",
+              "path": "/promptbio-wiki/docs/general/Project/project-overview",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "general/Workflow/workflow-overview",
+              "path": "/promptbio-wiki/docs/general/Workflow/workflow-overview",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/promptbio-wiki/docs/intro",
+              "sidebar": "generalSidebar"
+            },
+            {
+              "id": "technical/api-reference",
+              "path": "/promptbio-wiki/docs/technical/api-reference",
+              "sidebar": "technicalSidebar"
+            },
+            {
+              "id": "technical/technical-overview",
+              "path": "/promptbio-wiki/docs/technical/",
+              "sidebar": "technicalSidebar"
+            },
+            {
+              "id": "workbook/tutorial-differential-analysis",
+              "path": "/promptbio-wiki/docs/workbook/tutorial-differential-analysis",
+              "sidebar": "workbookSidebar"
+            },
+            {
+              "id": "workbook/workbook-overview",
+              "path": "/promptbio-wiki/docs/workbook/",
+              "sidebar": "workbookSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "generalSidebar": {
+              "link": {
+                "path": "/promptbio-wiki/docs/intro",
+                "label": "Welcome"
+              }
+            },
+            "technicalSidebar": {
+              "link": {
+                "path": "/promptbio-wiki/docs/technical/",
+                "label": "Technical Overview"
+              }
+            },
+            "workbookSidebar": {
+              "link": {
+                "path": "/promptbio-wiki/docs/workbook/",
+                "label": "Tutorials Overview"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

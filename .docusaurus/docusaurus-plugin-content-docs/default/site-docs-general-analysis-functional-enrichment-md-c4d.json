@@ -1,0 +1,28 @@
+{
+  "id": "general/Analysis/functional-enrichment",
+  "title": "Functional Enrichment",
+  "description": "Functional enrichment analysis helps you understand the biological meaning behind a list of significant genes or proteins by mapping them to known pathways and gene ontology (GO) terms.",
+  "source": "@site/docs/general/Analysis/Functional_enrichment.md",
+  "sourceDirName": "general/Analysis",
+  "slug": "/general/Analysis/functional-enrichment",
+  "permalink": "/promptbio-wiki/docs/general/Analysis/functional-enrichment",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "functional-enrichment",
+    "title": "Functional Enrichment",
+    "sidebar_position": 3
+  },
+  "sidebar": "generalSidebar",
+  "previous": {
+    "title": "Comparative Analysis",
+    "permalink": "/promptbio-wiki/docs/general/Analysis/comparative-analysis"
+  },
+  "next": {
+    "title": "Multi-Group Comparison",
+    "permalink": "/promptbio-wiki/docs/general/Analysis/multi-group-comparison"
+  }
+}

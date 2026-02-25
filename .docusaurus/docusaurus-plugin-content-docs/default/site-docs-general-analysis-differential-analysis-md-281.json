@@ -1,0 +1,28 @@
+{
+  "id": "general/Analysis/differential-analysis",
+  "title": "Differential Analysis",
+  "description": "Differential analysis identifies features (genes, proteins, metabolites) that are statistically significantly different between two conditions.",
+  "source": "@site/docs/general/Analysis/Differential_analysis.md",
+  "sourceDirName": "general/Analysis",
+  "slug": "/general/Analysis/differential-analysis",
+  "permalink": "/promptbio-wiki/docs/general/Analysis/differential-analysis",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "differential-analysis",
+    "title": "Differential Analysis",
+    "sidebar_position": 2
+  },
+  "sidebar": "generalSidebar",
+  "previous": {
+    "title": "Data Management",
+    "permalink": "/promptbio-wiki/docs/general/Data/data-overview"
+  },
+  "next": {
+    "title": "Comparative Analysis",
+    "permalink": "/promptbio-wiki/docs/general/Analysis/comparative-analysis"
+  }
+}

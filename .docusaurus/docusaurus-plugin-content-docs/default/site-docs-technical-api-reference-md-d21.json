@@ -1,0 +1,24 @@
+{
+  "id": "technical/api-reference",
+  "title": "API Reference",
+  "description": "The PromptBio REST API lets you programmatically interact with projects, data, and analyses.",
+  "source": "@site/docs/technical/api-reference.md",
+  "sourceDirName": "technical",
+  "slug": "/technical/api-reference",
+  "permalink": "/promptbio-wiki/docs/technical/api-reference",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "api-reference",
+    "title": "API Reference",
+    "sidebar_position": 2
+  },
+  "sidebar": "technicalSidebar",
+  "previous": {
+    "title": "Technical Overview",
+    "permalink": "/promptbio-wiki/docs/technical/"
+  }
+}

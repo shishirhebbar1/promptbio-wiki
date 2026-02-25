@@ -1,0 +1,28 @@
+{
+  "id": "general/MarkerGenie/markergenie-overview",
+  "title": "MarkerGenie Overview",
+  "description": "MarkerGenie automates biomarker discovery by combining statistical testing, machine learning, and biological database lookups to identify the most meaningful features in your dataset.",
+  "source": "@site/docs/general/MarkerGenie/overview.md",
+  "sourceDirName": "general/MarkerGenie",
+  "slug": "/general/MarkerGenie/markergenie-overview",
+  "permalink": "/promptbio-wiki/docs/general/MarkerGenie/markergenie-overview",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "markergenie-overview",
+    "title": "MarkerGenie Overview",
+    "sidebar_position": 1
+  },
+  "sidebar": "generalSidebar",
+  "previous": {
+    "title": "MLGenie Overview",
+    "permalink": "/promptbio-wiki/docs/general/MLGenie/mlgenie-overview"
+  },
+  "next": {
+    "title": "NotebookGenie Overview",
+    "permalink": "/promptbio-wiki/docs/general/NotebookGenie/notebookgenie-overview"
+  }
+}

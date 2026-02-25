@@ -1,0 +1,28 @@
+{
+  "id": "general/Project/project-overview",
+  "title": "Project Management",
+  "description": "Projects are the top-level workspace in PromptBio. All your data, analyses, and results are organized within a project.",
+  "source": "@site/docs/general/Project/overview.md",
+  "sourceDirName": "general/Project",
+  "slug": "/general/Project/project-overview",
+  "permalink": "/promptbio-wiki/docs/general/Project/project-overview",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "project-overview",
+    "title": "Project Management",
+    "sidebar_position": 1
+  },
+  "sidebar": "generalSidebar",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/promptbio-wiki/docs/general/Home/getting-started"
+  },
+  "next": {
+    "title": "Data Management",
+    "permalink": "/promptbio-wiki/docs/general/Data/data-overview"
+  }
+}
