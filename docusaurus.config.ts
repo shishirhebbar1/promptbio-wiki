@@ -12,7 +12,7 @@ const config: Config = {
   },
 
   url: 'https://shishirhebbar1.github.io',
-  baseUrl: '/promptbio-wiki/',
+  baseUrl: '/',
   organizationName: 'shishirhebbar1',
   projectName: 'promptbio-wiki',
   deploymentBranch: 'gh-pages',
