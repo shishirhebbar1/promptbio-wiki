@@ -4,7 +4,7 @@ title: Getting Started
 sidebar_position: 1
 ---
 
-# Getting Started with PromptBio
+# Getting Started with Prompt-bio
 
 Welcome! This guide walks you through everything you need to start analyzing biological data in PromptBio.
 
