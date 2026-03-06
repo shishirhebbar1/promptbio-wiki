@@ -55,6 +55,11 @@ const config: Config = {
       },
       items: [
         {
+          to: '/admin',
+          label: 'Admin',
+          position: 'right',
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'generalSidebar',
           position: 'left',
