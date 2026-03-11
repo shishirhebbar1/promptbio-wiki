@@ -1,9 +1,8 @@
 import React from 'react';
 import Heading from '@theme-original/Heading';
-import type HeadingType from '@theme/Heading';
 import {useDocPath} from '../DocPathContext';
 
-type Props = React.ComponentProps<typeof HeadingType>;
+type Props = React.ComponentProps<typeof Heading>;
 
 export default function HeadingWrapper(props: Props) {
   const ctx = useDocPath();
