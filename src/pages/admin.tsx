@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Layout from '@theme/Layout';
 
 const API_BASE = 'https://qobjexg86e.execute-api.us-east-1.amazonaws.com';
@@ -19,6 +19,63 @@ const DOCS: DocPath[] = [
   {label: 'Workbook Overview', path: 'docs/workbook/index.md'},
   {label: 'Tutorial: Differential Analysis', path: 'docs/workbook/tutorial-differential-analysis.md'},
 ];
+
+/** Find a section by its heading text (e.g. "3. Upload Your Data"). Returns start line index, end line index, and the section text. */
+function findSection(
+  fullContent: string,
+  sectionHeading: string,
+): {start: number; end: number; sectionText: string} | null {
+  const lines = fullContent.split('\n');
+  let sectionStartLevel: number | null = null;
+  let sectionStartIndex = -1;
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(/^(#{1,6})\s+(.*)$/);
+    if (m) {
+      const level = m[1].length;
+      const title = m[2].trim();
+      if (sectionStartLevel === null) {
+        if (title === sectionHeading || title.endsWith(sectionHeading)) {
+          sectionStartLevel = level;
+          sectionStartIndex = i;
+        }
+      } else {
+        if (level <= sectionStartLevel) {
+          return {
+            start: sectionStartIndex,
+            end: i,
+            sectionText: lines.slice(sectionStartIndex, i).join('\n'),
+          };
+        }
+      }
+    }
+  }
+  if (sectionStartIndex >= 0) {
+    return {
+      start: sectionStartIndex,
+      end: lines.length,
+      sectionText: lines.slice(sectionStartIndex).join('\n'),
+    };
+  }
+  return null;
+}
+
+/** Replace the section (by heading) in fullContent with newSectionText. */
+function replaceSection(
+  fullContent: string,
+  sectionHeading: string,
+  newSectionText: string,
+): string {
+  const result = findSection(fullContent, sectionHeading);
+  if (!result) return fullContent;
+  const lines = fullContent.split('\n');
+  const newLines = newSectionText.split('\n');
+  const merged = [
+    ...lines.slice(0, result.start),
+    ...newLines,
+    ...lines.slice(result.end),
+  ].join('\n');
+  return merged;
+}
 
 export default function AdminPage() {
   const getInitialFromQuery = (): {path: string; section?: string} => {
@@ -41,6 +98,8 @@ export default function AdminPage() {
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [sha, setSha] = useState<string | undefined>(undefined);
+  /** When editing a section, we keep the full document here to merge on save. */
+  const fullDocumentRef = useRef<string>('');
 
   const loadDoc = async (path: string) => {
     setLoading(true);
@@ -53,7 +112,19 @@ export default function AdminPage() {
       if (!res.ok) {
         throw new Error(data.error || 'Failed to load document');
       }
-      setContent(data.content ?? '');
+      const full = data.content ?? '';
+      fullDocumentRef.current = full;
+
+      if (sectionHeading) {
+        const section = findSection(full, sectionHeading);
+        if (section) {
+          setContent(section.sectionText);
+        } else {
+          setContent(full);
+        }
+      } else {
+        setContent(full);
+      }
       setSha(data.sha);
     } catch (e: any) {
       setError(e.message || 'Error loading document');
@@ -73,13 +144,20 @@ export default function AdminPage() {
     setError(null);
     setMessage(null);
     try {
+      const toSave =
+        sectionHeading && fullDocumentRef.current
+          ? replaceSection(fullDocumentRef.current, sectionHeading, content)
+          : content;
+
       const res = await fetch(`${API_BASE}/doc`, {
         method: 'PUT',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           path: selectedPath,
-          content,
-          message: `web-edit: update ${selectedPath}`,
+          content: toSave,
+          message: sectionHeading
+            ? `web-edit: update section "${sectionHeading}" in ${selectedPath}`
+            : `web-edit: update ${selectedPath}`,
           sha,
         }),
       });
@@ -107,9 +185,20 @@ export default function AdminPage() {
           (main branch) and will trigger an Amplify deploy.
         </p>
         {sectionHeading && (
-          <p style={{color: '#444', marginBottom: '0.75rem', fontSize: '0.9rem'}}>
+          <p style={{color: '#444', marginBottom: '0.5rem', fontSize: '0.9rem'}}>
             Editing section:&nbsp;
             <strong>{sectionHeading}</strong>
+            {' · '}
+            <a
+              href={`/admin?path=${encodeURIComponent(selectedPath)}`}
+              style={{fontSize: '0.85rem'}}>
+              Edit full page
+            </a>
+          </p>
+        )}
+        {sectionHeading && (
+          <p style={{color: '#666', marginBottom: '1rem', fontSize: '0.85rem'}}>
+            Only this section is shown below; saving will update just this part of the document.
           </p>
         )}
 
