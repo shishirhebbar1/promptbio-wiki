@@ -10,7 +10,7 @@ Welcome! This guide walks you through everything you need to start analyzing bio
 
 ## 1. Create an Account
 
-Go to [app.promptbio.com](https://app.promptbio.com) and sign up with your institutional or personal email.
+Go to [app.promptbio.com](https://app.promptbio.com) and sign up with your institutional or personal email. hey
 
 ## 2. Create a Project
 
