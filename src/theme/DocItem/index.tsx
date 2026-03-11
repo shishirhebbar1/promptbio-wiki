@@ -1,13 +1,18 @@
 import React from 'react';
 import DocItem from '@theme-original/DocItem';
-import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import {DocPathProvider} from '../DocPathContext';
 
 export default function DocItemWrapper(props: any) {
-  const {metadata} = useDoc();
-  // source can be e.g. '@site/docs/intro.md' or 'docs/intro.md'
-  const rawSource = metadata.source ?? '';
-  const sourcePath = rawSource.replace(/^@site\/?/, '') || 'docs/intro.md';
+  // Derive the source path from the DocItem props instead of useDoc()
+  const rawSource: string =
+    // Newer Docusaurus versions expose metadata on props.content
+    (props as any)?.content?.metadata?.source ??
+    // Fallbacks for other possible shapes
+    (props as any)?.metadata?.source ??
+    '';
+
+  const sourcePath =
+    (rawSource && rawSource.replace(/^@site\/?/, '')) || 'docs/intro.md';
 
   return (
     <DocPathProvider value={{docPath: sourcePath}}>
