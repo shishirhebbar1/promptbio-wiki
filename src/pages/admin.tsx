@@ -21,7 +21,20 @@ const DOCS: DocPath[] = [
 ];
 
 export default function AdminPage() {
-  const [selectedPath, setSelectedPath] = useState<string>(DOCS[0].path);
+  const getInitialFromQuery = (): {path: string; section?: string} => {
+    if (typeof window === 'undefined') {
+      return {path: DOCS[0].path};
+    }
+    const params = new URLSearchParams(window.location.search);
+    const path = params.get('path') || DOCS[0].path;
+    const section = params.get('section') || undefined;
+    return {path, section};
+  };
+
+  const initial = getInitialFromQuery();
+
+  const [selectedPath, setSelectedPath] = useState<string>(initial.path);
+  const [sectionHeading] = useState<string | undefined>(initial.section);
   const [content, setContent] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -93,6 +106,12 @@ export default function AdminPage() {
           Only use from a trusted IP. Changes are committed directly to GitHub
           (main branch) and will trigger an Amplify deploy.
         </p>
+        {sectionHeading && (
+          <p style={{color: '#444', marginBottom: '0.75rem', fontSize: '0.9rem'}}>
+            Editing section:&nbsp;
+            <strong>{sectionHeading}</strong>
+          </p>
+        )}
 
         <div
           style={{
