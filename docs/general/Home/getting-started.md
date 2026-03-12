@@ -44,5 +44,3 @@ Results appear in the **Results** panel after each run. You can:
 
 - Browse this wiki for detailed module guides
 - Contact support at support@promptbio.com
-- hello
-- hi
