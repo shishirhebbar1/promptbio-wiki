@@ -67,3 +67,11 @@ body.promptbio-edit-mode-active [class*='docMainContainer'] .container {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+/* DocItem layout limits the main column to 75% on desktop; undo in edit mode */
+@media (min-width: 997px) {
+  body.promptbio-edit-mode-active [class*='docItemCol'] {
+    max-width: none !important;
+    flex: 1 1 auto !important;
+  }
+}
