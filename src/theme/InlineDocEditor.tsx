@@ -215,9 +215,9 @@ export default function InlineDocEditor({docPath}: {docPath: string}) {
           style={{
             padding: '0.6rem 1rem',
             borderRadius: 6,
-            border: '1px solid #888',
-            background: 'transparent',
-            color: '#444',
+            border: '1px solid #b3261e',
+            background: '#b3261e',
+            color: '#fff',
             fontWeight: 500,
             cursor: 'pointer',
           }}>
