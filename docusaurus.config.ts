@@ -59,6 +59,7 @@ const config: Config = {
           position: 'right',
         },
         {
+          type: 'custom-adminLink',
           to: '/admin',
           label: 'Admin',
           position: 'right',

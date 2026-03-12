@@ -1,8 +1,15 @@
 import React from 'react';
 import {useEditMode} from '../../EditModeContext';
+import {useLocation} from '@docusaurus/router';
 
 export default function NavbarItemEditMode(): React.ReactElement {
   const {editMode, setEditMode} = useEditMode();
+  const location = useLocation();
+
+  // Hide on homepage
+  if (location.pathname === '/' || location.pathname === '') {
+    return <></>;
+  }
 
   return (
     <div style={{display: 'flex', alignItems: 'center', gap: '0.25rem'}}>
