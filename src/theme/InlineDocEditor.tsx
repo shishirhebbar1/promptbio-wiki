@@ -73,6 +73,8 @@ export default function InlineDocEditor({docPath}: {docPath: string}) {
       setMessage('Saved (commit ' + (data.commit || '').slice(0, 7) + '...)');
       if (data.sha != null) setSha(data.sha);
       else await loadDoc();
+      // After saving, return to view mode for this doc
+      setEditMode(false);
     } catch (e: any) {
       setError(e.message || 'Error saving document');
     } finally {
