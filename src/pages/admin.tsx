@@ -329,8 +329,20 @@ export default function AdminPage() {
                 padding: '1rem 1.25rem',
                 fontSize: '1rem',
                 lineHeight: 1.6,
+                color: '#1a1a1a',
+                background: '#fff',
               }}
-              className="markdown">
+              className="admin-preview markdown">
+              <style>{`
+                .admin-preview { color: #1a1a1a; }
+                .admin-preview h1, .admin-preview h2, .admin-preview h3,
+                .admin-preview h4, .admin-preview h5, .admin-preview h6 { color: #000; }
+                .admin-preview a { color: #3578e5; }
+                .admin-preview a:hover { text-decoration: underline; }
+                .admin-preview code { background: #f0f0f0; color: #1a1a1a; padding: 0.15em 0.4em; border-radius: 4px; }
+                .admin-preview pre { background: #f5f5f5; color: #1a1a1a; padding: 1rem; border-radius: 6px; overflow: auto; }
+                .admin-preview pre code { background: none; padding: 0; }
+              `}</style>
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {contentForPreview(content)}
               </ReactMarkdown>
