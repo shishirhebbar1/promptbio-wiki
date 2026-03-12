@@ -75,3 +75,14 @@ body.promptbio-edit-mode-active [class*='docMainContainer'] .container {
     flex: 1 1 auto !important;
   }
 }
+
+/* In edit mode, remove row negative margins/col padding that can create side gutters */
+body.promptbio-edit-mode-active [class*='docItemContainer'] .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body.promptbio-edit-mode-active [class*='docItemContainer'] .col {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
