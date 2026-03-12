@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import {API_BASE} from '../constants';
-import {useEditMode} from '../EditModeContext';
+import {useEditMode} from './EditModeContext';
 
 function contentForPreview(raw: string): string {
   const lines = raw.split('\n');
