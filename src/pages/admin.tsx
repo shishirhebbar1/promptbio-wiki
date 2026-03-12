@@ -88,6 +88,16 @@ function contentForPreview(raw: string): string {
   return raw;
 }
 
+function docSourcePathToRoute(sourcePath: string): string {
+  // e.g. docs/general/Home/getting-started.md -> /docs/general/Home/getting-started
+  // e.g. docs/workbook/index.md -> /docs/workbook
+  let p = sourcePath.replace(/^@site\/?/, '');
+  p = p.replace(/^docs\//, '');
+  p = p.replace(/\.mdx?$/i, '');
+  if (p.endsWith('/index')) p = p.slice(0, -'/index'.length);
+  return `/docs/${p}`.replace(/\/+$/, '');
+}
+
 export default function AdminPage() {
   const getInitialFromQuery = (): {path: string; section?: string} => {
     if (typeof window === 'undefined') {
@@ -179,6 +189,11 @@ export default function AdminPage() {
       setMessage(
         'Saved successfully (commit ' + (data.commit || '').slice(0, 7) + '...)',
       );
+      // Navigate back to the doc view after saving
+      if (typeof window !== 'undefined') {
+        window.location.href = docSourcePathToRoute(selectedPath);
+        return;
+      }
       await loadDoc(selectedPath);
     } catch (e: any) {
       setError(e.message || 'Error saving document');
