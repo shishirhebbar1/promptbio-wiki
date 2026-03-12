@@ -1,17 +1,20 @@
 import React from 'react';
 import Heading from '@theme-original/Heading';
 import {useDocPath} from '../DocPathContext';
+import {useEditMode} from '../EditModeContext';
 
 type Props = React.ComponentProps<typeof Heading>;
 
 export default function HeadingWrapper(props: Props) {
+  const {editMode} = useEditMode();
   const ctx = useDocPath();
   const Tag = (props as any).as || 'h2';
 
   const isHtmlTag =
     typeof Tag === 'string' && /^h[1-6]$/.test(Tag as string);
   const level = isHtmlTag ? Number((Tag as string).slice(1)) : undefined;
-  const isEditableLevel = !!ctx && level !== undefined && level >= 2 && level <= 3;
+  const isEditableLevel =
+    editMode && !!ctx && level !== undefined && level >= 2 && level <= 3;
 
   if (!isEditableLevel) {
     return <Heading {...props} />;
