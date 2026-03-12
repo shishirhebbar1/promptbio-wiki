@@ -218,7 +218,7 @@ export default function InlineDocEditor({docPath}: {docPath: string}) {
             border: '1px solid #b3261e',
             background: '#b3261e',
             color: '#fff',
-            fontWeight: 500,
+            fontWeight: 700,
             cursor: 'pointer',
           }}>
           Exit (discard changes)
