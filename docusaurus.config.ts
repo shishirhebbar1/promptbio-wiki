@@ -83,8 +83,8 @@ const config: Config = {
           label: 'Workbook',
         },
         {
-          href: 'https://app.promptbio.com',
-          label: 'Launch App',
+          href: 'https://promptbio.ai',
+          label: 'Go to App',
           position: 'right',
         },
       ],
@@ -112,7 +112,7 @@ const config: Config = {
         {
           title: 'PromptBio',
           items: [
-            {label: 'Launch App', href: 'https://app.promptbio.com'},
+            {label: 'Go to App', href: 'https://promptbio.ai'},
           ],
         },
       ],
