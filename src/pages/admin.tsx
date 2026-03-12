@@ -1,5 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Layout from '@theme/Layout';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const API_BASE = 'https://qobjexg86e.execute-api.us-east-1.amazonaws.com';
 
@@ -75,6 +77,16 @@ function replaceSection(
     ...lines.slice(result.end),
   ].join('\n');
   return merged;
+}
+
+/** Strip YAML frontmatter for preview so we don't render key: value as content. */
+function contentForPreview(raw: string): string {
+  const lines = raw.split('\n');
+  if (lines[0]?.trim() === '---') {
+    const end = lines.findIndex((l, i) => i > 0 && l.trim() === '---');
+    if (end > 0) return lines.slice(end + 1).join('\n');
+  }
+  return raw;
 }
 
 export default function AdminPage() {
@@ -254,22 +266,79 @@ export default function AdminPage() {
           </div>
         )}
 
-        <textarea
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
+        <div
           style={{
-            width: '100%',
+            display: 'flex',
+            gap: '1rem',
+            marginBottom: '1rem',
             minHeight: '60vh',
-            fontFamily: 'monospace',
-            fontSize: '0.9rem',
-            padding: '0.75rem',
-            borderRadius: 6,
             border: '1px solid #ccc',
-            resize: 'vertical',
-          }}
-        />
+            borderRadius: 8,
+            overflow: 'hidden',
+          }}>
+          <div style={{flex: '1 1 50%', minWidth: 0, display: 'flex', flexDirection: 'column'}}>
+            <div
+              style={{
+                padding: '0.4rem 0.75rem',
+                background: '#f5f5f5',
+                borderBottom: '1px solid #ccc',
+                fontSize: '0.8rem',
+                fontWeight: 600,
+              }}>
+              Editor
+            </div>
+            <textarea
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              style={{
+                flex: 1,
+                width: '100%',
+                minHeight: 280,
+                fontFamily: 'monospace',
+                fontSize: '0.9rem',
+                padding: '0.75rem',
+                border: 'none',
+                resize: 'none',
+                outline: 'none',
+              }}
+            />
+          </div>
+          <div
+            style={{
+              flex: '1 1 50%',
+              minWidth: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              background: '#fff',
+              borderLeft: '1px solid #ccc',
+            }}>
+            <div
+              style={{
+                padding: '0.4rem 0.75rem',
+                background: '#f5f5f5',
+                borderBottom: '1px solid #ccc',
+                fontSize: '0.8rem',
+                fontWeight: 600,
+              }}>
+              Preview
+            </div>
+            <div
+              style={{
+                flex: 1,
+                overflow: 'auto',
+                padding: '1rem 1.25rem',
+                fontSize: '1rem',
+                lineHeight: 1.6,
+              }}
+              className="markdown">
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {contentForPreview(content)}
+              </ReactMarkdown>
+            </div>
+          </div>
+        </div>
 
-        <div style={{marginTop: '1rem', display: 'flex', gap: '0.75rem'}}>
+        <div style={{marginTop: '0.5rem', display: 'flex', gap: '0.75rem'}}>
           <button
             type="button"
             onClick={handleSave}
