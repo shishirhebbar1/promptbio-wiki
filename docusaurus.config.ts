@@ -55,6 +55,10 @@ const config: Config = {
       },
       items: [
         {
+          type: 'custom-editMode',
+          position: 'right',
+        },
+        {
           to: '/admin',
           label: 'Admin',
           position: 'right',

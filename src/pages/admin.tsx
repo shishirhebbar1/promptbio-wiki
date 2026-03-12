@@ -2,8 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import Layout from '@theme/Layout';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-
-const API_BASE = 'https://qobjexg86e.execute-api.us-east-1.amazonaws.com';
+import {API_BASE} from '../constants';
 
 type DocPath = {
   label: string;
