@@ -37,4 +37,4 @@ Your expression matrix should be formatted as:
 
 ## Storage
 
-All uploaded data is stored securely in your project workspace. Data is not shared between projects unless explicitly exported.
+All uploaded data is stored securely in your project workspace. Data is not shared between projects unless explicitly exported. hi
