@@ -42,3 +42,18 @@
 .prism-code {
   font-size: 0.875rem;
 }
+
+/* Edit mode: let the two-panel editor use full width of the main area */
+body.promptbio-edit-mode-active [class*='docMainContainer'] {
+  max-width: none !important;
+}
+
+body.promptbio-edit-mode-active .inline-doc-editor-root {
+  max-width: none;
+  width: 100%;
+}
+
+body.promptbio-edit-mode-active .container.padding-top--md {
+  max-width: none !important;
+  width: 100%;
+}

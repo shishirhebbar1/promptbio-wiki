@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import {API_BASE} from '../constants';
+import {useEditMode} from '../EditModeContext';
 
 function contentForPreview(raw: string): string {
   const lines = raw.split('\n');
@@ -12,13 +13,21 @@ function contentForPreview(raw: string): string {
   return raw;
 }
 
+const BODY_EDIT_CLASS = 'promptbio-edit-mode-active';
+
 export default function InlineDocEditor({docPath}: {docPath: string}) {
+  const {setEditMode} = useEditMode();
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [sha, setSha] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    document.body.classList.add(BODY_EDIT_CLASS);
+    return () => document.body.classList.remove(BODY_EDIT_CLASS);
+  }, []);
 
   const loadDoc = React.useCallback(async () => {
     setLoading(true);
@@ -79,8 +88,13 @@ export default function InlineDocEditor({docPath}: {docPath: string}) {
     );
   }
 
+  const handleExit = () => {
+    void loadDoc(); // discard unsaved changes (reload from server)
+    setEditMode(false);
+  };
+
   return (
-    <div style={{marginTop: '0.5rem'}}>
+    <div className="inline-doc-editor-root" style={{marginTop: '0.5rem'}}>
       {error && (
         <div style={{marginBottom: '1rem', color: '#b00020', fontWeight: 500}}>
           {error}
@@ -179,7 +193,7 @@ export default function InlineDocEditor({docPath}: {docPath: string}) {
           </div>
         </div>
       </div>
-      <div style={{marginTop: '1rem', display: 'flex', gap: '0.75rem'}}>
+      <div style={{marginTop: '1rem', display: 'flex', gap: '0.75rem', flexWrap: 'wrap'}}>
         <button
           type="button"
           onClick={handleSave}
@@ -197,16 +211,17 @@ export default function InlineDocEditor({docPath}: {docPath: string}) {
         </button>
         <button
           type="button"
-          onClick={() => loadDoc()}
-          disabled={loading}
+          onClick={handleExit}
           style={{
             padding: '0.6rem 1rem',
             borderRadius: 6,
-            border: '1px solid #ccc',
-            background: '#f5f5f5',
+            border: '1px solid #888',
+            background: 'transparent',
+            color: '#444',
+            fontWeight: 500,
             cursor: 'pointer',
           }}>
-          Reload
+          Exit (discard changes)
         </button>
       </div>
     </div>
